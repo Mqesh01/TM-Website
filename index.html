@@ -1,0 +1,1401 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TM | Tapfumanei Munenge Fashion</title>
+
+<!-- BOOTSTRAP -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- BOOTSTRAP ICONS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+
+/* =========================
+   GENERAL STYLING
+========================= */
+
+:root {
+    --black: #101010;
+    --dark: #202020;
+    --grey: #777777;
+    --light-grey: #eeeeee;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--light-grey);
+    color: var(--black);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+    background: var(--black);
+    padding: 15px 4%;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.navbar-brand span {
+    color: #999999;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.navbar .nav-link {
+    color: white;
+    margin: 0 10px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.navbar .nav-link:hover {
+    color: #999999;
+}
+
+.navbar-toggler {
+    background: white;
+}
+
+.cart-icon {
+    color: white;
+    font-size: 25px;
+    position: relative;
+    margin-left: 20px;
+}
+
+.cart-count {
+    background: #777777;
+    color: white;
+    font-size: 11px;
+    padding: 3px 7px;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    right: -12px;
+}
+
+/* =========================
+   HERO ADVERT
+========================= */
+
+.hero {
+    min-height: 500px;
+
+    background:
+    linear-gradient(90deg,
+    rgba(0,0,0,.95),
+    rgba(0,0,0,.40)),
+
+    url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1800')
+    center/cover;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+    padding: 60px 6%;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 76px);
+    font-weight: 900;
+    line-height: 1.05;
+}
+
+.hero h1 span {
+    color: #999999;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 20px 0;
+    max-width: 580px;
+}
+
+.section-label {
+    color: #777777;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.main-btn {
+    background: #eeeeee;
+    color: #111111;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.main-btn:hover {
+    background: #777777;
+    color: white;
+}
+
+/* =========================
+   SERVICES STRIP
+========================= */
+
+.services-strip {
+    background: white;
+    padding: 22px 3%;
+}
+
+.service-item {
+    text-align: center;
+    border-right: 1px solid #dddddd;
+}
+
+.service-item:last-child {
+    border: none;
+}
+
+.service-item i {
+    font-size: 28px;
+}
+
+.service-item h6 {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* =========================
+   ABOUT TM
+========================= */
+
+.about-section {
+    background: white;
+    padding: 65px 4%;
+}
+
+.about-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about-section h2 {
+    font-weight: 900;
+    font-size: 38px;
+}
+
+.about-section p {
+    color: #555555;
+    line-height: 1.8;
+}
+
+.motive-box {
+    background: #eeeeee;
+    padding: 30px;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.motive-box h5 {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* =========================
+   COLLECTION SECTION
+========================= */
+
+.collection-section {
+    padding: 65px 3%;
+    background: #eeeeee;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 36px;
+    margin-bottom: 35px;
+}
+
+.product-card {
+    background: white;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.product-card img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    background: #dddddd;
+}
+
+.product-card .card-body {
+    text-align: center;
+}
+
+.product-card h6 {
+    font-weight: bold;
+}
+
+.price {
+    font-weight: 900;
+    font-size: 19px;
+}
+
+.add-btn {
+    background: #111111;
+    color: white;
+    border: none;
+    padding: 9px 22px;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.add-btn:hover {
+    background: #777777;
+}
+
+.stock {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.in-stock {
+    color: #333333;
+}
+
+.out-stock {
+    color: #999999;
+}
+
+.add-btn:disabled {
+    background: #aaaaaa;
+    cursor: not-allowed;
+}
+
+/* =========================
+   PROMOTIONAL BANNER
+========================= */
+
+.promo {
+    background:
+    linear-gradient(rgba(0,0,0,.88),
+    rgba(0,0,0,.88)),
+
+    url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600')
+    center/cover;
+
+    padding: 45px 5%;
+    color: white;
+}
+
+.promo h2 {
+    font-weight: 900;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #111111;
+    color: white;
+    padding: 55px 5% 15px;
+}
+
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+footer p,
+footer a {
+    color: #bbbbbb;
+    font-size: 14px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.footer-brand {
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.footer-brand span {
+    display: block;
+    font-size: 12px;
+    color: #999999;
+    letter-spacing: 1px;
+}
+
+.social-icons a {
+    font-size: 23px;
+    margin-right: 15px;
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555555;
+    margin-top: 35px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* =========================
+   NEWSLETTER
+========================= */
+
+.newsletter input {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.newsletter button {
+    background: #777777;
+    border: none;
+    padding: 11px 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #222222;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    z-index: 1000;
+}
+
+/* =========================
+   RESPONSIVENESS
+========================= */
+
+@media(max-width: 768px) {
+
+    .hero {
+        min-height: 430px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .service-item {
+        border: none;
+        margin-bottom: 20px;
+    }
+
+    .about-section {
+        text-align: center;
+    }
+
+    .about-img {
+        margin-bottom: 25px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .promo {
+        text-align: center;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav class="navbar navbar-expand-lg sticky-top">
+
+<div class="container-fluid">
+
+<a class="navbar-brand" href="#home">
+TM<br>
+<span>TAPFUMANEI MUNENGE</span>
+</a>
+
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse"
+data-bs-target="#mainNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="mainNav">
+
+<ul class="navbar-nav mx-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#shop">Shop</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#motive">Our Motive</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#collections">Collections</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+
+</ul>
+
+<a href="#cartModal"
+class="cart-icon"
+data-bs-toggle="modal"
+aria-label="Open shopping cart">
+
+<i class="bi bi-bag"></i>
+
+<span class="cart-count" id="cartCount">0</span>
+
+</a>
+
+</div>
+</div>
+</nav>
+
+
+<!-- =========================
+     HERO / TOP ADVERT
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<p class="section-label text-white">
+TM FASHION & LIFESTYLE
+</p>
+
+<h1>
+Style Today,<br>
+<span>Confidence</span> Forever
+</h1>
+
+<p>
+Premium fashion, modern designs and unmatched quality.
+TM brings you clothing that represents confidence,
+individuality and modern lifestyle.
+</p>
+
+<a href="#shop" class="btn main-btn">
+
+<i class="bi bi-bag"></i>
+Shop Now
+<i class="bi bi-arrow-right"></i>
+
+</a>
+
+</div>
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services-strip">
+
+<div class="row">
+
+<div class="col-md-3 service-item">
+
+<i class="bi bi-truck"></i>
+
+<h6>Reliable Delivery</h6>
+
+<small>Delivery options available</small>
+
+</div>
+
+<div class="col-md-3 service-item">
+
+<i class="bi bi-shield-check"></i>
+
+<h6>Secure Payments</h6>
+
+<small>Shop with confidence</small>
+
+</div>
+
+<div class="col-md-3 service-item">
+
+<i class="bi bi-headset"></i>
+
+<h6>Customer Support</h6>
+
+<small>We are here to help</small>
+
+</div>
+
+<div class="col-md-3 service-item">
+
+<i class="bi bi-arrow-repeat"></i>
+
+<h6>Easy Returns</h6>
+
+<small>Customer satisfaction</small>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     ABOUT TM
+========================= -->
+
+<section class="about-section" id="about">
+
+<div class="container-fluid">
+
+<div class="row align-items-center g-4">
+
+<div class="col-lg-4">
+
+<img class="about-img"
+src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900"
+alt="TM fashion collection">
+
+</div>
+
+<div class="col-lg-5">
+
+<span class="section-label">
+About Us
+</span>
+
+<h2>TM Fashion</h2>
+
+<h6 class="text-secondary fw-bold">
+TAPFUMANEI MUNENGE
+</h6>
+
+<p>
+TM, representing Tapfumanei Munenge, is a fashion
+brand driven by creativity, quality and modern lifestyle.
+
+We believe clothing is more than just something
+you wear. It is a statement of personality,
+confidence and identity.
+</p>
+
+<p>
+Our collection is designed to give customers
+access to modern fashion that combines comfort,
+elegance and individual expression.
+
+We aim to make fashion an experience that
+inspires people to express themselves confidently.
+</p>
+
+<a href="#collections"
+class="btn btn-dark rounded-pill px-4">
+
+Explore Our Collection
+
+</a>
+
+</div>
+
+<!-- OUR MOTIVE -->
+
+<div class="col-lg-3" id="motive">
+
+<div class="motive-box">
+
+<span class="section-label">
+Our Motive
+</span>
+
+<h3 class="fw-bold mt-3">
+Why We Exist
+</h3>
+
+<p>
+Our motive is to inspire confidence through
+fashion, deliver quality clothing and make
+modern style accessible to everyone.
+</p>
+
+<h5>Our Vision</h5>
+
+<p>
+To establish TM as a recognised fashion
+brand known for creativity, quality,
+innovation and customer satisfaction.
+</p>
+
+<h5>Our Mission</h5>
+
+<p>
+To provide fashionable, comfortable and
+quality clothing while building lasting
+relationships with our customers.
+</p>
+
+<h5>Our Values</h5>
+
+<p>
+Creativity, authenticity, quality,
+confidence and customer satisfaction.
+</p>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- =========================
+     CLOTHING COLLECTION
+========================= -->
+
+<section class="collection-section" id="shop">
+
+<div class="container-fluid">
+
+<h2 class="section-title" id="collections">
+The TM Collection
+</h2>
+
+<p class="text-center text-secondary mb-5">
+Discover your style. Express your identity.
+Wear TM.
+</p>
+
+<div class="row g-4">
+
+
+<!-- PRODUCT 1 -->
+
+<div class="col-6 col-md-4 col-lg-2">
+
+<div class="card product-card">
+
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500"
+alt="TM Classic T-Shirt">
+
+<div class="card-body">
+
+<h6>Classic T-Shirt</h6>
+
+<p class="price">$19.99</p>
+
+<p class="stock in-stock">In Stock</p>
+
+<button class="add-btn"
+onclick="addToCart('Classic T-Shirt',19.99)">
+
+Add to Cart
+
+</button>
+
+</div>
+</div>
+</div>
+
+
+<!-- PRODUCT 2 -->
+
+<div class="col-6 col-md-4 col-lg-2">
+
+<div class="card product-card">
+
+<img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500"
+alt="TM Premium Hoodie">
+
+<div class="card-body">
+
+<h6>Premium Hoodie</h6>
+
+<p class="price">$34.99</p>
+
+<p class="stock in-stock">In Stock</p>
+
+<button class="add-btn"
+onclick="addToCart('Premium Hoodie',34.99)">
+
+Add to Cart
+
+</button>
+
+</div>
+</div>
+</div>
+
+
+<!-- PRODUCT 3 -->
+
+<div class="col-6 col-md-4 col-lg-2">
+
+<div class="card product-card">
+
+<img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500"
+alt="TM Urban Jacket">
+
+<div class="card-body">
+
+<h6>Urban Jacket</h6>
+
+<p class="price">$44.99</p>
+
+<p class="stock in-stock">In Stock</p>
+
+<button class="add-btn"
+onclick="addToCart('Urban Jacket',44.99)">
+
+Add to Cart
+
+</button>
+
+</div>
+</div>
+</div>
+
+
+<!-- PRODUCT 4 -->
+
+<div class="col-6 col-md-4 col-lg-2">
+
+<div class="card product-card">
+
+<img src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=500"
+alt="TM Smart Polo">
+
+<div class="card-body">
+
+<h6>Smart Polo</h6>
+
+<p class="price">$24.99</p>
+
+<p class="stock in-stock">In Stock</p>
+
+<button class="add-btn"
+onclick="addToCart('Smart Polo',24.99)">
+
+Add to Cart
+
+</button>
+
+</div>
+</div>
+</div>
+
+
+<!-- PRODUCT 5 -->
+
+<div class="col-6 col-md-4 col-lg-2">
+
+<div class="card product-card">
+
+<img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500"
+alt="TM Signature Cap">
+
+<div class="card-body">
+
+<h6>Signature Cap</h6>
+
+<p class="price">$14.99</p>
+
+<p class="stock out-stock">Out of Stock</p>
+
+<button class="add-btn" disabled>
+
+Out of Stock
+
+</button>
+
+</div>
+</div>
+</div>
+
+
+<!-- PRODUCT 6 -->
+
+<div class="col-6 col-md-4 col-lg-2">
+
+<div class="card product-card">
+
+<img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=500"
+alt="TM Comfort Sweatshirt">
+
+<div class="card-body">
+
+<h6>Comfort Sweatshirt</h6>
+
+<p class="price">$29.99</p>
+
+<p class="stock in-stock">In Stock</p>
+
+<button class="add-btn"
+onclick="addToCart('Comfort Sweatshirt',29.99)">
+
+Add to Cart
+
+</button>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- =========================
+     BOTTOM ADVERT
+========================= -->
+
+<section class="promo">
+
+<div class="container-fluid">
+
+<div class="row align-items-center">
+
+<div class="col-md-8">
+
+<h2>Upgrade Your Wardrobe Today!</h2>
+
+<p class="mb-0">
+TM Fashion. Modern Designs. Unmatched Quality.
+</p>
+
+</div>
+
+<div class="col-md-4 text-md-end mt-3 mt-md-0">
+
+<a href="#shop" class="btn main-btn">
+
+Shop TM Now
+<i class="bi bi-arrow-right"></i>
+
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- =========================
+     FOOTER / CONTACT
+========================= -->
+
+<footer id="contact">
+
+<div class="container-fluid">
+
+<div class="row g-4">
+
+
+<!-- BRAND IDENTITY -->
+
+<div class="col-md-3">
+
+<div class="footer-brand">
+
+TM
+
+<span>TAPFUMANEI MUNENGE</span>
+
+</div>
+
+<p class="mt-3">
+Wear Your Identity.
+Fashion Beyond Limits.
+</p>
+
+<p>
+Welcome to TM Fashion & Lifestyle,
+where modern style meets confidence.
+</p>
+
+</div>
+
+
+<!-- CONTACT DETAILS -->
+
+<div class="col-md-3">
+
+<h5>Contact Us</h5>
+
+<p>
+<i class="bi bi-telephone"></i>
++263 77 123 4567
+</p>
+
+<p>
+<i class="bi bi-envelope"></i>
+info@tmfashion.co.zw
+</p>
+
+<p>
+<i class="bi bi-geo-alt"></i>
+Harare, Zimbabwe
+</p>
+
+<p>
+<i class="bi bi-clock"></i>
+Customer Support
+</p>
+
+</div>
+
+
+<!-- SOCIAL MEDIA -->
+
+<div class="col-md-2">
+
+<h5>Follow TM</h5>
+
+<div class="social-icons">
+
+<a href="#" aria-label="Facebook">
+<i class="bi bi-facebook"></i>
+</a>
+
+<a href="#" aria-label="Instagram">
+<i class="bi bi-instagram"></i>
+</a>
+
+<a href="#" aria-label="TikTok">
+<i class="bi bi-tiktok"></i>
+</a>
+
+<a href="https://wa.me/263771234567"
+target="_blank"
+aria-label="WhatsApp">
+
+<i class="bi bi-whatsapp"></i>
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- QUICK LINKS -->
+
+<div class="col-md-2">
+
+<h5>Quick Links</h5>
+
+<p><a href="#home">Home</a></p>
+
+<p><a href="#shop">Shop</a></p>
+
+<p><a href="#about">About TM</a></p>
+
+<p><a href="#motive">Our Motive</a></p>
+
+<p><a href="#collections">Collections</a></p>
+
+<p><a href="#contact">Contact</a></p>
+
+</div>
+
+
+<!-- NEWSLETTER -->
+
+<div class="col-md-2 newsletter">
+
+<h5>Stay Updated</h5>
+
+<p>
+Subscribe for new arrivals,
+fashion trends and special offers.
+</p>
+
+<form onsubmit="subscribe(event)">
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email"
+required
+>
+
+<button type="submit">
+Subscribe
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<!-- COPYRIGHT -->
+
+<div class="footer-bottom">
+
+<p>
+© 2026 TM - Tapfumanei Munenge.
+All Rights Reserved.
+</p>
+
+<p>
+Wear Your Identity. Fashion Beyond Limits.
+</p>
+
+</div>
+
+</div>
+</footer>
+
+
+<!-- =========================
+     WHATSAPP FLOATING BUTTON
+========================= -->
+
+<a href="https://wa.me/263771234567"
+class="whatsapp"
+target="_blank"
+aria-label="Chat with TM on WhatsApp">
+
+<i class="bi bi-whatsapp"></i>
+
+</a>
+
+
+<!-- =========================
+     SHOPPING CART MODAL
+========================= -->
+
+<div class="modal fade" id="cartModal" tabindex="-1">
+
+<div class="modal-dialog modal-dialog-centered">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h5 class="modal-title">
+TM Shopping Cart
+</h5>
+
+<button type="button"
+class="btn-close"
+data-bs-dismiss="modal">
+</button>
+
+</div>
+
+<div class="modal-body">
+
+<div id="cartItems">
+Your cart is empty.
+</div>
+
+<h5 class="mt-3">
+Total: $<span id="cartTotal">0.00</span>
+</h5>
+
+</div>
+
+<div class="modal-footer">
+
+<button class="btn btn-secondary"
+data-bs-dismiss="modal">
+
+Continue Shopping
+
+</button>
+
+<button class="btn btn-dark"
+onclick="checkout()">
+
+Checkout
+
+</button>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+// =========================
+// SHOPPING CART
+// =========================
+
+let cart = [];
+
+function addToCart(name, price) {
+
+    let existing = cart.find(item => item.name === name);
+
+    if(existing) {
+
+        existing.quantity++;
+
+    } else {
+
+        cart.push({
+            name: name,
+            price: price,
+            quantity: 1
+        });
+
+    }
+
+    updateCart();
+
+    alert(name + " added to your TM shopping cart!");
+
+}
+
+
+// =========================
+// UPDATE CART
+// =========================
+
+function updateCart() {
+
+    let count = cart.reduce(
+        (total, item) => total + item.quantity, 0
+    );
+
+    document.getElementById("cartCount").innerText = count;
+
+    let total = 0;
+
+    let html = "";
+
+    cart.forEach((item, index) => {
+
+        let subtotal = item.price * item.quantity;
+
+        total += subtotal;
+
+        html += `
+
+        <div class="d-flex justify-content-between align-items-center border-bottom py-3">
+
+            <div>
+
+                <strong>${item.name}</strong>
+
+                <br>
+
+                $${item.price.toFixed(2)} × ${item.quantity}
+
+            </div>
+
+            <div>
+
+                $${subtotal.toFixed(2)}
+
+                <button
+                class="btn btn-sm btn-outline-dark ms-2"
+                onclick="removeItem(${index})">
+
+                <i class="bi bi-trash"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+    document.getElementById("cartItems").innerHTML =
+        html || "Your cart is empty.";
+
+    document.getElementById("cartTotal").innerText =
+        total.toFixed(2);
+
+}
+
+
+// =========================
+// REMOVE CART ITEM
+// =========================
+
+function removeItem(index) {
+
+    cart.splice(index, 1);
+
+    updateCart();
+
+}
+
+
+// =========================
+// CHECKOUT THROUGH WHATSAPP
+// =========================
+
+function checkout() {
+
+    if(cart.length === 0) {
+
+        alert("Your TM shopping cart is empty!");
+
+        return;
+
+    }
+
+    let message =
+    "Hello TM - Tapfumanei Munenge!\n\n" +
+    "I would like to place an order:\n\n";
+
+    cart.forEach(item => {
+
+        message +=
+        item.name +
+        " x " + item.quantity +
+        " - $" +
+        (item.price * item.quantity).toFixed(2) +
+        "\n";
+
+    });
+
+    let total = cart.reduce(
+        (sum, item) =>
+        sum + item.price * item.quantity, 0
+    );
+
+    message +=
+    "\nTotal: $" + total.toFixed(2);
+
+    message +=
+    "\n\nPlease assist me with completing my order.";
+
+    let phone = "263771234567";
+
+    window.open(
+        "https://wa.me/" + phone +
+        "?text=" + encodeURIComponent(message),
+        "_blank"
+    );
+
+}
+
+
+// =========================
+// NEWSLETTER
+// =========================
+
+function subscribe(event) {
+
+    event.preventDefault();
+
+    let email =
+    document.getElementById("email").value;
+
+    alert(
+        "Thank you for subscribing to TM Fashion, " +
+        email
+    );
+
+    document.getElementById("email").value = "";
+
+}
+
+</script>
+
+</body>
+</html>
